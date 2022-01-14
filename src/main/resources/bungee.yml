@@ -1,0 +1,5 @@
+name: SeatUtils
+version: 1.0
+author: whereismyreach
+
+main: me.reach.utils.Main

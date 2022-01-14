@@ -1,0 +1,6 @@
+name: SeatUtils
+version: 1.0
+author: whereismyreach
+depend: [kCore]
+
+main: me.reach.utils.Main

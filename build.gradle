@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.reach.utils'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files('C:/Users/gamer/Documents/Utils/api/PaperSpigot.jar')
+    implementation files('C:/Users/gamer/Documents/Utils/api/kCore.jar')
+    implementation files('C:/Users/gamer/Documents/Utils/api/BungeeCord.jar')
+
+    def lombok = 'org.projectlombok:lombok:1.18.22'
+    compileOnly lombok
+    annotationProcessor lombok
+}
+
+compileJava {
+    options.encoding('UTF-8')
+
+    sourceCompatibility('1.8')
+    targetCompatibility('1.8')
+}

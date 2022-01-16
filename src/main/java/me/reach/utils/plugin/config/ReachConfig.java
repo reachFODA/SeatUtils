@@ -8,10 +8,7 @@ import me.reach.utils.plugin.config.compatibility.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 
 public class ReachConfig {
@@ -78,12 +75,24 @@ public class ReachConfig {
         return this.config.getString(path);
     }
 
+    public String getString(String path, String def) {
+        return this.config.getString(path, def);
+    }
+
     public boolean getBoolean(String path) {
         return this.config.getBoolean(path);
     }
 
+    public boolean getBoolean(String path, boolean def) {
+        return this.config.getBoolean(path, def);
+    }
+
     public List<String> getStringList(String path) {
         return this.config.getStringList(path);
+    }
+
+    public Collection<String> getKeys() {
+        return this.config.getKeys();
     }
 
     public Set<String> getKeys(boolean flag) {

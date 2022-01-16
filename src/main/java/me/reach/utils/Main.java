@@ -1,11 +1,13 @@
 package me.reach.utils;
 
 import dev.slickcollections.kiwizin.plugin.KPlugin;
+import me.reach.utils.api.BukkitMessage;
 import me.reach.utils.cmd.Commands;
 import me.reach.utils.listener.Listeners;
 import me.reach.utils.listener.player.PluginMessageListener;
 import me.reach.utils.lobby.UpgradeNPC;
 import me.reach.utils.manager.VanishManager;
+import me.reach.utils.objects.Group;
 import me.reach.utils.objects.Upgrade;
 
 public class Main extends KPlugin {
@@ -25,6 +27,7 @@ public class Main extends KPlugin {
 
     @Override
     public void enable() {
+        Group.setupGroups();
         Language.setupLanguage();
         Listeners.setupListeners();
         Commands.setupCommands();
@@ -32,6 +35,7 @@ public class Main extends KPlugin {
         Upgrade.setupUpgrades();
         UpgradeNPC.setupNPCs();
 
+        BukkitMessage.registerChannel("SeatUtils");
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         getServer().getMessenger().registerOutgoingPluginChannel(this, "MESSAGE_UTILS");
         getServer().getMessenger().registerIncomingPluginChannel(this, "MESSAGE_UTILS", new PluginMessageListener());

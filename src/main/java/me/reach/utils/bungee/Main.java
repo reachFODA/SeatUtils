@@ -1,5 +1,6 @@
 package me.reach.utils.bungee;
 
+import me.reach.utils.api.BungeeMessage;
 import me.reach.utils.bungee.cmd.Commands;
 import me.reach.utils.bungee.listeners.Listeners;
 import me.reach.utils.plugin.config.ReachLogger;
@@ -26,6 +27,7 @@ public class Main extends Plugin {
     }
 
     public void onEnable() {
+        BungeeMessage.registerChannel("SeatUtils");
         Listeners.setupListeners();
         Settings.setupSettings();
         Commands.setupCommands();

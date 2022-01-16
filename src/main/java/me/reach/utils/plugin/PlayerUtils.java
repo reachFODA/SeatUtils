@@ -14,16 +14,6 @@ import java.text.DecimalFormat;
 
 public class PlayerUtils {
 
-    public static void removeCash(Player player, int x){
-        try {
-            CashManager.removeCash(player.getName(), x);
-        } catch (CashException ignored) {}
-    }
-
-    public static String getFormattedCash(Player player){
-        return new DecimalFormat("#,###").format(CashManager.getCash(player));
-    }
-
     public static String getReplaced(String message, String player) {
         return message
                 .replace("{colored}", Role.getColored(player))

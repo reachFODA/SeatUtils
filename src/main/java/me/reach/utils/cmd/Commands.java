@@ -27,6 +27,7 @@ public abstract class Commands extends Command
     }
 
     public static void setupCommands() {
+        new SetGroupCommand();
         new FormsCommand();
         new InvseeCommand();
         new VanishCommand();

@@ -31,9 +31,15 @@ public abstract class YamlConfiguration {
 
     public abstract String getString(String path);
 
+    public abstract String getString(String path, String def);
+
     public abstract boolean getBoolean(String path);
 
+    public abstract boolean getBoolean(String path, boolean def);
+
     public abstract List<String> getStringList(String path);
+
+    public abstract Collection<String> getKeys();
 
     public abstract Set<String> getKeys(boolean flag);
 

@@ -1,0 +1,8 @@
+vip:
+  name: 'vip'
+  bungee: true
+  execute: 'lp sei lá oq set {user} vip'
+  permission: 'seatutils.cmd.setgroup'
+  title:
+    up: '&a{user}'
+    bottom: '&fTornou-se &aVip'

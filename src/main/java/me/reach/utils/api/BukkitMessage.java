@@ -17,8 +17,8 @@ import com.google.common.io.*;
 import dev.slickcollections.kiwizin.utils.enums.*;
 import dev.slickcollections.kiwizin.nms.*;
 
-public class BukkitMessage implements Listener, PluginMessageListener
-{
+public class BukkitMessage implements Listener, PluginMessageListener {
+    
     private static String registeredChannel;
 
     public static void registerChannel(final String channel) {
